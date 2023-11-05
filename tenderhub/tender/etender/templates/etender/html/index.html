@@ -1,0 +1,952 @@
+{% load static %}
+{% include 'etender/html/header.html' %}
+<!DOCTYPE html>
+<head>
+    <title>Что делать с поборами в школах, садиках и больницах. Инструкция от TenderHub / TenderHub </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="csrf-token" content="7VpxJy7WFFKEgc0Qm7dkTgJhYgz1xg6zl93nHvNc">
+    <link rel='shortcut icon' type='image/x-icon' href='static/etender/img/winner.png' />
+
+    <meta name="description" content="Все, что покупает государство, вы уже оплатили своими налогами. Если вам потребуются деньги на ремонт класса или лекарства в больнице, проверьте Prozorro, не были ли они уже закуплены">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <title>TENDER</title>
+    <link rel="icon" href="{% static 'etender/img/logo.png' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'etender/css/style.css' %}">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+            {'gtm.start': new Date().getTime(),event:'gtm.js'}
+        );var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WFBFL6J');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+    <header class="header">
+        <div class="row row__xl header__row">
+            <input type="checkbox" class="header__input" id="menu">
+
+            <a href="#" rel="noreferrer" target="_blank">
+                <img src="static/etender/img/logo3.png" alt="logo" class="header__logo header__logo--white">
+                <img src="static/etender/img/logo1.png" alt="logo logo__dark" class="header__logo header__logo--dark">
+            </a>
+
+            <label for="menu" class="header__toggle">
+                <span class="header__toggle--line"></span>
+                <span class="header__toggle--line"></span>
+                <span class="header__toggle--line"></span>
+            </label>
+
+            <nav class="header__nav">
+                <a rel="noreferrer" data-head-nav href="#control-purchase" class="text text--bold header__link">Ваши средства</a>
+                <a rel="noreferrer" data-head-nav href="#what-prozorro" class="text text--bold header__link">Про TenderHub</a>
+                <a rel="noreferrer" data-head-nav href="#instructions" class="text text--bold header__link">Контролируйте</a>
+                <a rel="noreferrer" data-head-nav href="#useful-resources" class="text text--bold header__link">Полезные ресурсы</a>
+                <a rel="noreferrer" target="_blank" href="https://zakupki.okmot.kg/popp/view/order/list.xhtml" class="text text--bold header__link header__link--btn">Перейти к поиску</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="scroll-nav">
+        <div class="scroll-nav__control">
+            <button id="scroll-nav-prev" class="scroll-nav__btn" aria-label="Попередній слайд" aria-hidden="true"></button>
+            <button id="scroll-nav-next" class="scroll-nav__btn" aria-label="Наступний слайд" aria-hidden="true"></button>
+        </div>
+
+        <div class="scroll-nav__count">
+            <span id="block-num" class="scroll-nav__num"></span>
+            <span class="scroll-nav__line"></span>
+            <span id="count-blocks" class="scroll-nav__num"></span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="main-block" class="main-slider">
+            <h1 class="title title--main main-slider__title">
+                Проверьте, что государство покупает за ваши налоги
+            </h1>
+
+            <div id="main-slider">
+                <div class="main-slider__slide main-slider__slide--1">
+                    <div class="main-slider__comment text text--main">
+                        Уважаемые родители, сдаем деньги на ремонт спортплощадки
+                    </div>
+                </div>
+                <div class="main-slider__slide main-slider__slide--2">
+                    <div class="main-slider__comment text text--main">
+                        Лекарства нет, поэтому вам придется оплатить курс лечения самостоятельно...
+                    </div>
+                </div>
+                <div class="main-slider__slide main-slider__slide--3">
+                    <div class="main-slider__comment text text--main">
+                        Ушул Антоненко жакшы экен, лавочки берип койду бизге
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-slider__nav">
+                <button class="main-slider__nav--item"></button>
+                <button class="main-slider__nav--item"></button>
+                <button class="main-slider__nav--item"></button>
+            </nav>
+        </section>
+
+        <section id="control-purchase" class="row control-purchase columns fade-bottom">
+            <div class="columns__half">
+                <h2 class="title color--blue">Почему важно контролировать публичные закупки?</h2>
+            </div>
+            <div class="columns__half">
+                <p class="text text--main">
+                    150 млрд сом-примерно столько ежегодно тратят государственные и муниципальные органы власти и предприятия на публичные закупки. За эти средства они обеспечивают свою работу и (в идеале) удовлетворяют потребности сообществ
+                </p>
+            </div>
+        </section>
+
+        <section class="purchase-slider mb-8 fade-bottom">
+            <div id="purchase-slider">
+                <div class="purchase-slider__slide">
+                    <img src="static/etender/img/section_3_med.jpeg" class="purchase-slider__img" aria-hidden="true">
+                    <p class="text mt-5">Закупки медикаментов</p>
+                </div>
+                <div class="purchase-slider__slide">
+                    <img src="static/etender/img/section_3_detplo.jpg" class="purchase-slider__img" aria-hidden="true">
+                    <p class="text mt-5">Детские площадки</p>
+                </div>
+                <div class="purchase-slider__slide">
+                    <img src="static/etender/img/section_3_shco.jpg" class="purchase-slider__img" aria-hidden="true" border-radius="10px">
+                    <p class="text mt-5">Ремонт школ</p>
+                </div>
+                <div class="purchase-slider__slide">
+                    <img src="static/etender/img/section_3_dorogi.jpg" class="purchase-slider__img" aria-hidden="true">
+                    <p class="text mt-5">Строительство дорог</p>
+                </div>
+                <div class="purchase-slider__slide">
+                    <img src="static/etender/img/section_3_park.jpg" class="purchase-slider__img" aria-hidden="true">
+                    <p class="text mt-5">Благоустройство парков</p>
+                </div>
+                <div class="purchase-slider__slide">
+                    <img src="static/etender/img/section_3_tran.jfif" class="purchase-slider__img" aria-hidden="true">
+                    <p class="text mt-5">Транспорт</p>
+                </div>
+            </div>
+            <div class="purchase-slider__controls mt-6 row">
+                <button class="slider-nav__prev"></button>
+                <button class="slider-nav__next"></button>
+            </div>
+        </section>
+
+        <section class="row pb-50px fade-bottom">
+            <p class="text">
+                Это все лишь маленькая доля того, что покупает государство. Поэтому от того, насколько эффективно и честно государственные структуры тратят эти средства, зависит, в какой стране мы живем. Комфортной для каждого гражданина-не очень.
+            </p>
+        </section>
+
+        <section id="budget-funds" class="pb-50px pt-50px">
+            <div class="budget-funds fade-bottom ml-a mr-a">
+                <div class="budget-funds__circle"></div>
+
+                <div class="row">
+                    <h2 class="title">Бюджетных средств не существует</h2>
+
+                    <p class="text text--main color--white mt-8">
+                        Когда мы получаем зарплату, покупаем товары в магазине, заправляемся бензином, мы платим налоги в бюджет. По данным, государственный бюджет <a rel="noopener" target="_blank" href="https://kyrgyzstan.un.org/sites/default/files/2022-04/SDG%20report%20RUS%20%283%29.pdf" class="text text--link text--main text--large"> на 75% состоит</a> именно из наших с вами налогов.
+                    </p>
+
+                    <p class="text text--main color--white mt-8">
+                        Публичные закупки происходят за наши средства. И каждый гражданин имеет право контролировать их течение и даже влиять на то, что покупает государство.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="row pb-8 pt-50px">
+            <p class="text text--main color--blue">
+                При поддержке Проекта USAID / KY aid “Прозрачность и подотчетность в государственном управлении и услугах / TAPAS” мы запустили социальную кампанию " проверьте, что покупает государство за ваши налоги”
+            </p>
+
+            <p class="text mt-6">
+                Мы хотим, чтобы вы знали, что у вас есть право контролировать эффективность расходования ваших налогов, и как в этом вам может помочь электронная система TenderHub
+            </p>
+        </section>
+ 
+        <section id="video-block" class="video-slider pb-50px">
+           <div id="video-slider">
+                <iframe class="video-slider__slide" src="https://yandex.ru/video/preview/13899469013019810685?from=tabbar&parent-reqid=1699111284570593-16473329293019658042-balancer-l7leveler-kubr-yp-vla-95-BAL-2507&text=коррупция+госзакупки" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video-slider__slide" src="https://www.youtube.com/embed/_1I8kiUY1oo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video-slider__slide" src="https://www.youtube.com/embed/58O-lPXzpBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        
+            <nav class="video-slider__nav">
+                <button class="video-slider__nav--item"></button>
+                <button class="video-slider__nav--item"></button>
+                <button class="video-slider__nav--item"></button>
+            </nav>
+        </section>
+    
+        <section id="what-prozorro" class="row what-prozorro columns fade-bottom">
+            <div class="columns__half">
+                <h2 class="title color--blue">Что такое TenderHub?</h2>
+
+                <p class="text mt-8">
+                    TenderHub — это электронная система публичных закупок. С 2016 года все тендеры государственных структур в Украине проходят именно через Prozorro. И это сразу же открыло для общества огромный массив информации о том, как происходят закупки.
+                </p>
+            </div>
+            <div class="columns__half">
+                <p class="text text--main">
+                    Все видят все-ключевой принцип TenderHub. За это кыргызская система неоднократно получала международное признание и была признана самой прозрачной системой публичных закупок в мире
+                </p>
+            </div>
+        </section>
+
+        <section class="row on-portal fade-bottom">
+            <h2 class="title color--blue">
+                На портале TenderHub вы можете узнать полную информацию о каждой закупке
+            </h2>
+
+            <div class="columns">
+                <div class="columns__half mt-8">
+                    <img src="static/etender/img/money_1.png" class="on-portal__icon" alt="money">
+                    <p class="text mt-4 on-portal__text">
+                        Ожидаемую стоимость тендера-то есть максимальную сумму, которую заказчик собирался потратить на закупку
+                    </p>
+                </div>
+                <div class="columns__half mt-8">
+                    <img src="static/etender/img/docs_1.png" class="on-portal__icon" alt="docs">
+                    <p class="text mt-4 on-portal__text">
+                        Тендерную документацию-подробное описание, что именно собирался купить заказчик, и каким критериям должны были соответствовать участники
+                    </p>
+                </div>
+                <div class="columns__half mt-8">
+                    <img src="static/etender/img/people.png" class="on-portal__icon" alt="people">
+                    <p class="text mt-4 on-portal__text">
+                        Участников тендера и ход аукциона - кто как снижал свою цену во время торгов
+                    </p>
+                </div>
+                <div class="columns__half mt-8">
+                    <img src="static/etender/img/winner.png" class="on-portal__icon" alt="winner">
+                    <p class="text mt-4 on-portal__text">
+                        Победителя закупки и условия договора-за какую сумму и за какое время должен быть выполнен контракт
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="search-info" class="search-info">
+            <div class="row">
+                <h2 class="title color--white fade-bottom">
+                    Как искать информацию в TenderHub?
+                </h2>
+
+                <div class="search-info__card fade-bottom">
+                    <img src="static/etender/img/order-tracking.png"" class="search-info__icon" alt="search-purchase">
+                    <div class="search-info__content">
+                        <h3 class="text text--main color--white mb-4">
+                            Поиск по конкретной закупке
+                        </h3>
+
+                        <p class="text color--white">
+                            Поиск на TenderHub работает, как Гугл. Достаточно знать ключевые слова (например, название предмета закупки, адрес выполнения работ и т.д.) и ввести их в поисковую строку. Вы также можете использовать фильтры, чтобы ограничить поиск по дате, ожидаемой стоимости закупки и другим критериям.
+                        </p>
+                    </div>
+                </div>
+                <div class="search-info__card fade-bottom">
+                    <img src="static/etender/img/search.png"" class="search-info__icon" alt="search-people">
+                    <div class="search-info__content">
+                        <h3 class="text text--main color--white mb-4">
+                            Поиск по заказчику
+                        </h3>
+
+                        <p class="text color--white">
+                            Ищете закупки конкретной организации-например, школы, где учится ваш ребенок? Начните вводить ее название в фильтр "заказчик" и вам подтянется конкретная организация. Вы сможете увидеть все покупки, которые она сделала, в хронологическом порядке.
+                        </p>
+                    </div>
+                </div>
+                <div class="search-info__card fade-bottom">
+                    <img src="static/etender/img/research.png" class="search-info__icon" alt="search-docs">
+                    <div class="search-info__content">
+                        <h3 class="text text--main color--white mb-4">
+                            Анализ условий договора
+                        </h3>
+
+                        <p class="text color--white">
+                            Хотите узнать у кого, за сколько и по каким условиям была проведена та или иная закупка? Вся эта информация присутствует на странице каждой покупки в TenderHub
+                        </p>
+                    </div>
+                </div>
+
+                <div class="search-info__card fade-bottom">
+                    <a rel="noreferrer" target="_blank" href="https://zakupki.okmot.kg/popp/view/order/list.xhtml" class="search-info__link">Искать на TenderHub/a>
+                </div>
+            </div>
+        </section>
+
+        <section id="instructions" class="control-slider pb-50px fade-bottom">
+            <div class="row">
+                <h2 class="title color--blue">Вы можете контролировать покупки</h2>
+
+                <p class="text mt-6 mb-8">
+                    Вместе с нашими партнерами мы подготовили инструкции, которые помогут вам на 100% разобраться с общественным контролем закупок в различных ситуациях, ведь каждая из них может иметь свою специфику
+                </p>
+            </div>
+
+            <div id="control-slider">
+                <div class="control-slider__slide">
+                    <div class="control-slider__circle"></div>
+                    <div class="control-slider__content">
+                        <img src="static/etender/img/img_1.jpg" class="control-slider__img" aria-hidden="true">
+
+                        <div class="control-slider__text">
+                            <h4 class="text text--main text--bold color--white">
+                                У вас требуют платить за лекарства, которые должны быть на складе в больнице
+                            </h4>
+
+                            <a rel="noopener" href="https://patients.org.ua/2022/01/17/instrukcziya-yak-zahystyty-svoye-pravo-na-otrymannya-bezoplatnyh-likiv/" class="text text--link color--white mt-8" target="_blank">Инструкция от пациентов Кыргызстан</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-slider__slide">
+                    <div class="control-slider__circle"></div>
+                    <div class="control-slider__content">
+                        <img src="static/etender/img/img_2.jpg" class="control-slider__img" aria-hidden="true">
+
+                        <div class="control-slider__text">
+                            <h4 class="text text--main text--bold color--white">
+                                Вам кажется, что политики пиарятся на вещах, купленных за средства налогоплательщиков
+                            </h4>
+
+                            <a rel="noopener" href="https://aer.org.ua/articles/vam-zdatsya-scho-politiki-piaryatsya-na-rechah-kuplenih-za-koshti-platnikiv-podatkiv-scho-robiti" target="_blank" class="text text--link color--white mt-8">Инструкция от Агентства эффективных решений</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-slider__slide">
+                    <div class="control-slider__circle"></div>
+                    <div class="control-slider__content">
+                        <img src="static/etender/img/img_3.jpg" class="control-slider__img" aria-hidden="true">
+
+                        <div class="control-slider__text">
+                            <h4 class="text text--main text--bold color--white">
+                                Дорога, по которой вы едете, никогда не ремонтируется
+                            </h4>
+
+                            <a rel="noopener" href="https://zakupki.okmot.kg/popp/view/order/list.xhtml" target="_blank" class="text text--link color--white mt-8">Инструкция от активистки Кто то</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-slider__slide">
+                    <div class="control-slider__circle"></div>
+                    <div class="control-slider__content">
+                        <img src="static/etender/img/img_4.jpg" class="control-slider__img" aria-hidden="true">
+
+                        <div class="control-slider__text">
+                            <h4 class="text text--main text--bold color--white">
+                                У вас требуют сдавать деньги в детсаду или школе
+                            </h4>
+
+                            <a rel="noopener" href="https://nus.org.ua/what-your-school-buys/" target="_blank" class="text text--link color--white mt-8">Инструкция от Новой школы</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-slider__slide">
+                    <div class="control-slider__circle"></div>
+                    <div class="control-slider__content">
+                        <img src="/img/landing/control/control_slider/121.png" class="control-slider__img" aria-hidden="true">
+
+                        <div class="control-slider__text">
+                            <h4 class="text text--main text--bold color--white">
+                                Вы убеждены, что тендер состоялся с нарушениями или переплатой
+                            </h4>
+
+                            <a rel="noopener" href="https://ti-ukraine.org/blogs/zlovzhyvannya-u-sferi-zakupivel-kudy-zvertatysya/" target="_blank" class="text text--link color--white mt-8">Инструкция от Transparency International</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-slider__slide">
+                    <div class="control-slider__circle"></div>
+                    <div class="control-slider__content">
+                        <img src="/img/landing/control/control_slider/123.png" class="control-slider__img" aria-hidden="true">
+
+                        <div class="control-slider__text">
+                            <h4 class="text text--main text--bold color--white">
+                                Ваша городская власть не вкладывает средства в необходимую инфраструктуру и другие проекты.
+                            </h4>
+
+                            <a rel="noopener" href=https://gb.kyivcity.gov.ua/about#" target="_blank" class="text text--link color--white mt-8">Инструкция от Общественного бюджета Бишкека</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-slider__controls mt-6 row">
+                <button class="slider-nav__prev" aria-label="Попередній слайд" aria-hidden="true"></button>
+                <button class="slider-nav__next" aria-label="Наступний слайд" aria-hidden="true"></button>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews fade-bottom">
+            <div class="row mb-8">
+                <h2 class="title color--blue">Опыт контроля закупок на TenderHub</h2>
+            </div>
+
+            <div id="reviews-slider">
+                <div class="reviews__slide" data-index="0">
+                    <div class="reviews__capture">
+                        <img src="/img/landing/control/quotes-blue.svg" alt="quotes" class="mr-3 reviews__quotes">
+                        <div>
+                            <p class="text text--semibold">
+                                Я проходила курс химиотерапии в Харьковском онкодиспансере, но в какой-то момент мне сказали, что нужный мне препарат трастузумаб закончился и я должен покупать его самостоятельно. Но у меня не было таких денег!                            </p>
+                            <p class="text text--semibold mt-2">
+                                Я обратилась на горячую линию “Номер здоровья” и там мне посоветовали получить препарат в другом городе, ведь с медреформой это стало возможно. Как оказалось, самые большие остатки препарата были в Бишкеке - поэтому я получила у своего семейного врача направление к онкологу и отправилась в Бишкек, где смогла получить такие важные для меня лекарства                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reviews__author">
+                        <img src="/img/landing/control/reviews_slider/101.png" alt="author" class="reviews__img">
+
+                        <div class="ml-4">
+                            <p class="text text--bold">Ірина Панченко</p>
+                            <br>
+                            <p class="text mt-2">м. Харків</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__slide" data-index="1">
+                    <div class="reviews__capture">
+                        <img src="/img/landing/control/quotes-blue.svg" alt="quotes" class="mr-3 reviews__quotes">
+                        <div>
+                            <p class="text text--semibold">
+                                У меня ребенок ходит в детский садик. И с родителей регулярно сбивали по 200 грн на песок для площадки. Но на самом деле деньги в столичном бюджете на это есть! Несколько лет я писал письма на столичные управления образования, чтобы те включили закупку песка для детских садов. И в какой-то момент чиновники сдались: песок для площадок закупили централизованно через TenderHub                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reviews__author">
+                        <img src="/img/landing/control/reviews_slider/122.png" alt="author" class="reviews__img">
+
+                        <div class="ml-4">
+                            <p class="text text--bold">Сергій Пасюта</p>
+                            <br>
+                            <p class="text mt-2">м. Київ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__slide" data-index="2">
+                    <div class="reviews__capture">
+                        <img src="/img/landing/control/quotes-blue.svg" alt="quotes" class="mr-3 reviews__quotes">
+                        <div>
+                            <p class="text text--semibold">
+                                Центральную дорогу в нашем селе не ремонтировали годами. И когда я писала обращение к руководству района и области, там ответили, что ее ремонт был запланирован еще на июль. Но на улице уже был август.                            </p>
+                            <p class="text text--semibold mt-2">
+                                Я обратилась в организацию COST Ukraine, там нашли соответствующую закупку в Prozorro. И уже после этого, со ссылками на конкретные пункты договора, мы написали обращение не только в ОГА, но и в полицию. Как результат, уже через неделю дорога была отремонтирована                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reviews__author">
+                        <img src="/img/landing/control/reviews_slider/99.png" alt="author" class="reviews__img">
+
+                        <div class="ml-4">
+                            <p class="text text--bold">Анна Лангава</p>
+                            <br>
+                            <p class="text mt-2">с. Гута</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__slide" data-index="3">
+                    <div class="reviews__capture">
+                        <img src="/img/landing/control/quotes-blue.svg" alt="quotes" class="mr-3 reviews__quotes">
+                        <div>
+                            <p class="text text--semibold">
+                                Благодаря информации из TenderHub я увидела, что даже ремонт туалета в моем горсовете состоялся с существенной переплатой: подрядчик получил деньги за декоративную штукатурку, а по факту ее не было. По результатам моих обращений в прокуратуру было открыто уголовное производство, а подрядчик вернул средства в бюджет                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reviews__author">
+                        <img src="/img/landing/control/reviews_slider/100.png" alt="author" class="reviews__img">
+
+                        <div class="ml-4">
+                            <p class="text text--bold">Ольга Нос</p>
+                            <br>
+                            <p class="text mt-2">м. Українка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews__nav row">
+                <button class="slider-nav__prev" aria-label="Попередній слайд" aria-hidden="true"></button>
+                <button class="slider-nav__next" aria-label="Наступний слайд" aria-hidden="true"></button>
+            </div>
+        </section>
+
+        <section id="useful-resources" class="row useful-resources">
+            <h2 class="title color--blue fade-bottom">Корисні ресурси</h2>
+
+            <div class="columns">
+                <a rel="noopener" href="https://zakupki.okmot.kg/popp/view/order/list.xhtml" target="_blank" class="columns__half columns__half--large-margin useful-resources__item fade-bottom">
+                    <div class="useful-resources__card">
+                        <img src="/img/landing/control/icons/bgr1.png" class="useful-resources__img">
+                        <p class="title color--white useful-resources__title">DOZORRO</p>
+                    </div>
+
+                    <p class="text useful-resources__text">
+                        Проект общественного контроля публичных закупок от Transparency International                    </p>
+                </a>
+
+                <a rel="noopener" href="https://patients.org.ua/" target="_blank" class="columns__half columns__half--large-margin useful-resources__item fade-bottom">
+                    <div class="useful-resources__card">
+                        <img src="/img/landing/control/icons/bgr3.png" class="useful-resources__img">
+                        <p class="title color--white useful-resources__title">Пацієнти <br> України</p>
+                    </div>
+
+                    <p class="text useful-resources__text">
+                        Крупнейшая организация пациентов в Украине                    </p>
+                </a>
+
+                <a rel="noopener" href="https://zakupki.okmot.kg/popp/view/order/list.xhtml" target="_blank" class="columns__half columns__half--large-margin useful-resources__item fade-bottom">
+                    <div class="useful-resources__card">
+                        <img src="/img/landing/control/icons/bgr5.png" class="useful-resources__img">
+                        <p class="title color--white useful-resources__title">Доступ <br> до правди</p>
+                    </div>
+
+                    <p class="text useful-resources__text">
+                        Платформа для отправки электронных запросов распорядителям информации                    </p>
+                </a>
+
+                <a rel="noopener" href="https://zakupki.okmot.kg/popp/view/order/list.xhtml" target="_blank" class="columns__half columns__half--large-margin useful-resources__item fade-bottom">
+                    <div class="useful-resources__card">
+                        <img src="/img/landing/control/icons/bgr2.png" class="useful-resources__img">
+                        <p class="title color--white useful-resources__title">bi.prozorro.org</p>
+                    </div>
+
+                    <p class="text useful-resources__text">
+                        Бесплатный модуль аналитики публичных закупок                    </p>
+                </a>
+            </div>
+        </section>
+
+        <section class="row partners fade-bottom">
+            <h2 class="title color--blue">
+                Спасибо за реализацию этой кампании           
+            </h2>
+
+            <ul class="partners__list">
+                <li class="partners__item">
+                    <a rel="noopener" href="https://www.usaid.gov/kyrgyz-republic" target="_blank">
+                        <img src="static/etender/img/USAID_Vert_KG.png" class="partners__img" alt="">
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a rel="noopener" href="https://www.usaid.gov/kyrgyz-republic" target="_blank">
+                        <img src="/img/landing/control/partners/UK-AID.png" class="partners__img" alt="">
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a rel="noopener" href="https://www.eurasia.org/" target="_blank">
+                        <img src="/img/landing/control/partners/EF_logo-stacked.png" class="partners__img" alt="">
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a rel="noopener" href="https://tabasco.com.ua/" target="_blank">
+                        <img src="/img/landing/control/partners/Tabasco.png" class="partners__img" alt="">
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a rel="noopener" href="https://www.lumiereproduction.tv/" target="_blank">
+                        <img src="/img/landing/control/partners/Logo_Lumiere.svg" class="partners__img" alt="">
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a rel="noopener" href="https://tabasco.com.ua/" target="_blank">
+                        <img src="/img/landing/control/partners/Main.png" class="partners__img" alt="">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="row footer__content">
+            <div class="footer__col footer__col--40">
+                <a rel="noreferrer" href="#" target="_blank">
+                    <img src="static/etender/img/logo3.png" alt="logo" class="header__logo mb-4">
+                </a>
+                <br>
+                <a rel="noreferrer" href="#" target="_blank" class="text text--no-underline color--white footer__link">Про нас</a>
+            </div>
+
+            <div class="footer__col footer__col--30">
+                <a rel="noopener" href="#" class="text text--no-underline color--white footer__link">+996550672035</a>
+                <br>
+                <a  rel="noopener" href="#" class="text text--no-underline color--white mt-2 footer__link">0777009975</a>
+                <br>
+                <a rel="noopener" href="#" class="text text--no-underline color--white mt-2 footer__link">feedback@tenderhub.gmail</a>
+            </div>
+
+            <div class="footer__col footer__col--30">
+                <p class="text color--white">
+                    пр. Чуй, 255, <br> г. Бишкек, 07022
+                </p>
+
+                <div class="footer__socials">
+                    <a rel="noopener" href="#" target="_blank" class="footer__social footer__social--fb ml-0"></a>
+                    <a rel="noopener" href="#" target="_blank" class="footer__social footer__social--tg"></a>
+                    <a rel="noopener" href="#" target="_blank" class="footer__social footer__social--yt"></a>
+                    <a rel="noopener" href="#" target="_blank" class="footer__social footer__social--inst"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script>
+        (()=>{
+    var e, t, n, r, o, i, a, s;
+    t = "header--colorful",
+    n = 0,
+    r = [{
+        path: "#main-block"
+    }, {
+        path: "#control-purchase",
+        hasBlueClass: !0
+    }, {
+        path: "#budget-funds",
+        hasBlueClass: !0
+    }, {
+        path: "#video-block",
+        hasBlueClass: !0
+    }, {
+        path: "#what-prozorro",
+        hasBlueClass: !0
+    }, {
+        path: "#search-info"
+    }, {
+        path: "#instructions",
+        hasBlueClass: !0
+    }, {
+        path: "#reviews",
+        hasBlueClass: !0
+    }, {
+        path: "#useful-resources",
+        hasBlueClass: !0
+    }],
+    o = function(e) {
+        return document.querySelector(e)
+    }
+    ,
+    i = function() {
+        return o(".header").offsetHeight
+    }
+    ,
+    a = function() {
+        var e = [];
+        r.forEach((function(t, n) {
+            var r = o(t.path)
+              , i = .7 * r.offsetHeight
+              , a = -1 * r.getBoundingClientRect().top <= i;
+            e.push({
+                index: n,
+                isActive: a,
+                hasBlueClass: t.hasBlueClass
+            })
+        }
+        ));
+        var i = e.find((function(e) {
+            return e.isActive
+        }
+        )) || e[e.length - 1];
+        i.index ? o(".header").classList.add(t) : o(".header").classList.remove(t),
+        n = i.index,
+        o("#block-num").innerText = (i.index + 1).toString().padStart(2, "0"),
+        o("#count-blocks").innerText = r.length.toString().padStart(2, "0"),
+        i.hasBlueClass ? o(".scroll-nav").classList.add("blue") : o(".scroll-nav").classList.remove("blue")
+    }
+    ,
+    s = function(e) {
+        var t = r[n + e].path
+          , a = o(t).offsetTop
+          , s = n ? a - i() : a;
+        window.history.pushState(null, null, t),
+        window.scrollTo({
+            top: s,
+            behavior: "smooth"
+        })
+    }
+    ,
+    window.addEventListener("scroll", a),
+    a(),
+    o("#scroll-nav-prev").addEventListener("click", (function() {
+        return s(-1)
+    }
+    )),
+    o("#scroll-nav-next").addEventListener("click", (function() {
+        return s(1)
+    }
+    )),
+    (e = "[data-head-nav]",
+    document.querySelectorAll(e)).forEach((function(e) {
+        e.addEventListener("click", (function(e) {
+            e.preventDefault();
+            var t = o(e.target.hash).offsetTop;
+            window.history.pushState(null, null, e.target.hash),
+            o(".header__input").checked = !1,
+            window.scrollTo({
+                top: t - i(),
+                behavior: "smooth"
+            })
+        }
+        ))
+    }
+    )),
+    function() {
+        var e = this
+          , t = "active"
+          , n = function(e) {
+            var t = function(e) {
+                return document.querySelector(e)
+            }(".budget-funds__circle");
+            t.style.transform = "translate(".concat(.125 * e, "%, 0%")
+        }
+          , r = function(e) {
+            (function(e) {
+                return document.querySelectorAll(e)
+            }
+            )(e).forEach((function(e) {
+                e.getBoundingClientRect().top < window.innerHeight - 150 ? e.classList.add(t) : e.classList.remove(t)
+            }
+            ))
+        };
+        window.addEventListener("scroll", (function() {
+            r(".fade-bottom"),
+            window.innerWidth >= 1024 && n(e.scrollY)
+        }
+        ))
+    }(),
+    (()=>{
+        function e(e, n) {
+            return function(e) {
+                if (Array.isArray(e))
+                    return e
+            }(e) || function(e, t) {
+                var n = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
+                if (null != n) {
+                    var r, o, i, a, s = [], l = !0, c = !1;
+                    try {
+                        if (i = (n = n.call(e)).next,
+                        0 === t) {
+                            if (Object(n) !== n)
+                                return;
+                            l = !1
+                        } else
+                            for (; !(l = (r = i.call(n)).done) && (s.push(r.value),
+                            s.length !== t); l = !0)
+                                ;
+                    } catch (e) {
+                        c = !0,
+                        o = e
+                    } finally {
+                        try {
+                            if (!l && null != n.return && (a = n.return(),
+                            Object(a) !== a))
+                                return
+                        } finally {
+                            if (c)
+                                throw o
+                        }
+                    }
+                    return s
+                }
+            }(e, n) || function(e, n) {
+                if (!e)
+                    return;
+                if ("string" == typeof e)
+                    return t(e, n);
+                var r = Object.prototype.toString.call(e).slice(8, -1);
+                "Object" === r && e.constructor && (r = e.constructor.name);
+                if ("Map" === r || "Set" === r)
+                    return Array.from(e);
+                if ("Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))
+                    return t(e, n)
+            }(e, n) || function() {
+                throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+            }()
+        }
+        function t(e, t) {
+            (null == t || t > e.length) && (t = e.length);
+            for (var n = 0, r = new Array(t); n < t; n++)
+                r[n] = e[n];
+            return r
+        }
+        !function() {
+            var t = function(t, n) {
+                var r = t.container.querySelectorAll(".tns-slide-active");
+                (r.forEach((function(e) {
+                    return e.classList.remove(n)
+                }
+                )),
+                window.innerWidth >= 1024) && (e(r, 1)[0].classList.add(n),
+                r[r.length - 1].classList.add(n))
+            }
+              , n = function(e, t) {
+                var n = e.container.querySelectorAll(".tns-slide-active");
+                n.forEach((function(e) {
+                    return e.classList.remove(t)
+                }
+                )),
+                n[Math.round(n.length / 2) - 1].classList.add(t)
+            };
+            tns({
+                container: "#main-slider",
+                items: 1,
+                touch: !0,
+                mouseDrag: !0,
+                slideBy: "page",
+                controls: !1,
+                autoplay: !0,
+                autoplayButton: !1,
+                autoplayButtonOutput: !1,
+                autoplayHoverPause: !0,
+                navPosition: "bottom",
+                navContainer: ".main-slider__nav"
+            }),
+            tns({
+                container: "#video-slider",
+                items: 1,
+                touch: !0,
+                mouseDrag: !0,
+                slideBy: "page",
+                controls: !1,
+                navPosition: "bottom",
+                navContainer: ".video-slider__nav"
+            });
+            var r = tns({
+                container: "#reviews-slider",
+                items: 1,
+                loop: !0,
+                touch: !0,
+                center: !0,
+                mouseDrag: !0,
+                slideBy: 1,
+                nav: !1,
+                controlsContainer: ".reviews__nav",
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    1100: {
+                        items: 2
+                    }
+                },
+                onInit: function(e) {
+                    return n(e, "active")
+                }
+            });
+            r.events.on("indexChanged", (function(e) {
+                return n(e, "active")
+            }
+            )),
+            r.events.on("newBreakpointEnd", (function(e) {
+                return n(e, "active")
+            }
+            )),
+            document.querySelectorAll("#reviews-slider .reviews__slide").forEach((function(e) {
+                e.addEventListener("click", (function(e) {
+                    var t = e.target.closest(".reviews__slide")
+                      , n = parseInt(t.dataset.index);
+                    r.goTo(n)
+                }
+                ))
+            }
+            ));
+            var o = tns({
+                container: "#control-slider",
+                items: 1,
+                loop: !0,
+                slideBy: 1,
+                touch: !0,
+                mouseDrag: !0,
+                center: !0,
+                nav: !1,
+                controlsContainer: ".control-slider__controls",
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    756: {
+                        items: 2
+                    },
+                    1100: {
+                        items: 3
+                    },
+                    1360: {
+                        items: 4
+                    },
+                    1860: {
+                        items: 5
+                    }
+                },
+                onInit: function(e) {
+                    return n(e, "blue")
+                }
+            });
+            o.events.on("indexChanged", (function(e) {
+                return n(e, "blue")
+            }
+            )),
+            o.events.on("newBreakpointEnd", (function(e) {
+                return n(e, "blue")
+            }
+            ));
+            var i = tns({
+                container: "#purchase-slider",
+                items: 1,
+                center: !0,
+                touch: !0,
+                mouseDrag: !0,
+                slideBy: 1,
+                nav: !1,
+                controlsContainer: ".purchase-slider__controls",
+                onInit: function(e) {
+                    return t(e, "gray")
+                },
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    756: {
+                        items: 3
+                    },
+                    1024: {
+                        items: 4
+                    },
+                    1266: {
+                        items: 6
+                    }
+                }
+            });
+            i.events.on("indexChanged", (function(e) {
+                return t(e, "gray")
+            }
+            )),
+            i.events.on("newBreakpointEnd", (function(e) {
+                return t(e, "gray")
+            }
+            ))
+        }()
+    }
+    )()
+}
+)();
+
+
+    </script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFBFL6J"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   
+
+{% include 'etender/html/footer.html' %}
+</body>
+</html>
